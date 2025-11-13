@@ -1,0 +1,12 @@
+import pandas as pd
+
+d1 = {"임석현": 100, "박종범":95, "성수경":90, "이준석":85, "김영일":80, "최재범":80, "박효순":80}
+
+sr1 = pd.Series(d1, name = "명단")
+
+sr1.iloc[0] = 90
+sr1.iloc[1] = 100
+
+sr1.index = sr1.index.str.replace("^박", "임", regex=True)
+print(sr1)
+
